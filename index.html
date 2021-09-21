@@ -2,45 +2,74 @@
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="-300 -100 700 700"
+  viewBox="-203 -23 700 700"
 >
   <defs>
     <symbol id="Hexagram_U4DC0" viewBox="0 0 1000 1000">
       <title>乾 qián ䷀ U+4DC0</title>
-      <path
-        id="U4DC0"
-        d="m0 0l0 100 750 0 0-100zm0 220l0 100 750 0 0-100zm0 220l0 100 750 0 0-100zm0 220l0 100 750 0 0-100zm0 220l0 100 750 0 0-100zm0 220l0 100 750 0 0-100z"
-      />
+      <image x="0" y="0" width="80" height="80" href="yangyao.svg" />
     </symbol>
   </defs>
   <defs>
     <clipPath id="box">
-      <rect x="-220" y="-20" width="500" height="500" />
+      <rect x="-200" y="-20" width="500" height="500" />
     </clipPath>
   </defs>
 
   <image
     xlink:href="https://64.media.tumblr.com/357a6503a0a2e0123472bbf6b4abdc7f/tumblr_mznksf7obW1rll0l3o1_1280.jpg"
-    x="-220"
+    x="-200"
     y="-20"
     clip-path="url(#box)"
   />
+  <filter id="neon">
+    <feFlood
+      flood-color="rgb(255,255,255)"
+      flood-opacity="0.8"
+      in="SourceGraphic"
+    />
+    <feComposite operator="in" in2="SourceGraphic" />
+    <feGaussianBlur stdDeviation="8" />
+    <feComponentTransfer result="glow1">
+      <feFuncA type="linear" slope="5" intercept="0" />
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow1" />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
 
   <rect
-    x="-220"
+    x="0"
+    y="0"
+    width="100%"
+    height="100%"
+    fill="none"
+    transform="scale(1 3) translate(0, -25)"
+  />
+
+  <rect
+    fill="none"
+    x="-200"
     y="-20"
     width="500"
     height="500"
-    style="
-      fill: none;
-      fill-opacity: 1;
-      stroke: black;
-      stroke-opacity: 1;
-      stroke-width: 3;
-    "
+    style="stroke: black; stroke-opacity: 1; stroke-width: 3"
   />
   <use xlink:href="#box" />
-  <use xlink:href="#Hexagram_U4DC0" width="250" height="400" y="6" />
-  <text x="-182" y="200" font-size="150" font-family="KaiTi">乾</text>
+  <use
+    xlink:href="#Hexagram_U4DC0"
+    width="250"
+    height="400"
+    x="-60"
+    y="130"
+    filter="url(#neon)"
+  />
+  <text x="0" y="120" font-size="100" font-family="KaiTi" filter="url(#neon)">
+    乾
+  </text>
   <text x="240" y="450" font-size="20" font-family="KaiTi">1</text>
+
+  
+  <image x="0" y="0" width="80" height="80" xlink:href="yangyao.svg" />
 </svg>
