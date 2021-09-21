@@ -1,25 +1,75 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="-200 -200 600 600"
-  fill="#000"
-  stroke="none"
-  stroke-width="0"
+  viewBox="-203 -23 700 700"
 >
   <defs>
-    <symbol id="Hexagram_U4DC1" viewBox="0 0 750 1200">
-      <path
-        id="U4DC1"
-        d="m0 0l0 100 300 0 0-100zm450 0l0 100 300 0 0-100zm-450 220l0 100 300 0 0-100zm450 0l0 100 300 0 0-100zm-450 220l0 100 300 0 0-100zm450 0l0 100 300 0 0-100zm-450 220l0 100 300 0 0-100zm450 0l0 100 300 0 0-100zm-450 220l0 100 300 0 0-100zm450 0l0 100 300 0 0-100zm-450 220l0 100 300 0 0-100zm450 0l0 100 300 0 0-100z"
-      />
+    <symbol id="Hexagram_U4DC0" viewBox="0 0 1000 1000">
+      <title>乾 qián ䷀ U+4DC0</title>
+      <image x="0" y="0" width="80" height="80" href="yangyao.svg" />
     </symbol>
   </defs>
+  <defs>
+    <clipPath id="box">
+      <rect x="-200" y="-20" width="500" height="500" />
+    </clipPath>
+  </defs>
 
-  <g>
-    <use xlink:href="#Hexagram_U4DC1" width="250" height="400" />
-  </g>
+  <image
+    xlink:href="https://64.media.tumblr.com/357a6503a0a2e0123472bbf6b4abdc7f/tumblr_mznksf7obW1rll0l3o1_1280.jpg"
+    x="-200"
+    y="-20"
+    clip-path="url(#box)"
+  />
+  <filter id="neon">
+    <feFlood
+      flood-color="rgb(255,255,255)"
+      flood-opacity="0.8"
+      in="SourceGraphic"
+    />
+    <feComposite operator="in" in2="SourceGraphic" />
+    <feGaussianBlur stdDeviation="8" />
+    <feComponentTransfer result="glow1">
+      <feFuncA type="linear" slope="5" intercept="0" />
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode in="glow1" />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
 
-  <text x="-200" y="140" font-size="180" font-family="STKaiti">坤</text>
+  <rect
+    x="0"
+    y="0"
+    width="100%"
+    height="100%"
+    fill="none"
+    transform="scale(1 3) translate(0, -25)"
+  />
+
+  <rect
+    fill="none"
+    x="-200"
+    y="-20"
+    width="500"
+    height="500"
+    style="stroke: black; stroke-opacity: 1; stroke-width: 3"
+  />
+  <use xlink:href="#box" />
+  <use
+    xlink:href="#Hexagram_U4DC0"
+    width="250"
+    height="400"
+    x="-60"
+    y="130"
+    filter="url(#neon)"
+  />
+  <text x="0" y="120" font-size="100" font-family="KaiTi" filter="url(#neon)">
+    乾
+  </text>
+  <text x="240" y="450" font-size="20" font-family="KaiTi">1</text>
+
+  
+  <image x="0" y="0" width="80" height="80" xlink:href="yangyao.svg" />
 </svg>
