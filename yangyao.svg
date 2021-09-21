@@ -2,21 +2,21 @@
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 540 50"
+  viewBox="0 0 580 50"
 >
   <defs>
       <path
         id="yangyao"
-        d="M10,10 
-             a10 10 0 0 1 10 -10
+        d="M20,20 
+             a20 20 0 0 1 20 -20
              h 500   
-             a10 10 0 0 1 10 10
-             v 30
-             a10 10 0 0 1 -10 10
+             a20 20 0 0 1 20 20
+             v 0
+             a20 20 0 0 1 -20 20
              h -500
-             a10 10 0 0 1 -10 -10
+             a20 20 0 0 1 -20 -20
              z"
-      fill="#ff3600"
+      fill="#0d0d0d"
       />
   </defs>
 
