@@ -1,3 +1,18 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>64 Gua</title>
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="./game.js"></script>
+</head>
+
+<body>
+
 <div id="app" style="width: 80%; height: 80%">
   <svg
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -125,7 +140,7 @@
         />
       </g>
     </g>
-    <animateTransform
+    <!-- <animateTransform
       attributeName="transform"
       begin="0s"
       dur="2s"
@@ -133,6 +148,14 @@
       from="0 0 0"
       to="360 0 0"
       repeatCount="indefinite"
-    />
+    /> -->
   </svg>
 </div>
+<button id="play">Play</button>
+<button id="plus">+</button>
+<button id="minus">-</button>
+<button id="pause">Pause</button>
+<span id="speed"></span>
+<br>
+<button id="yao">Yao</button>
+</body>
