@@ -52,7 +52,7 @@ var speed=0.1;
 playBtn.onclick = function() {
   rotateCD.play();
   gsap.to(rotateCD, {timeScale: speed, duration:3});
-  speedText.innerHTML=speed;
+  speedText.innerHTML=speed=0.1;
     
   pauseTween && pauseTween.kill();
   if (audio.paused) gsap.set(audio, { volume: 0, playbackRate: 0.5 });  
@@ -92,7 +92,7 @@ pauseBtn.onclick = function() {
 
 function spinStop(){
     gsap.to(rotateCD, { timeScale: 0, duration:3, onComplete: function() { this.pause(); }});
-    speedText.innerHTML=0;
+    speedText.innerHTML=speed=0;
 }
 
 function showCard(){
