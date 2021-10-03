@@ -8,13 +8,35 @@
   <title>64 Gua</title>
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src="./game.js"></script>
+  <script src="js/game.js"></script>
   <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/input.css">
 </head>
 
 <body>
+ 
+  <div id="inputNumbers" class=" card">
+    <form class="otc" name="enter-number" action="#">
+      <fieldset>
+        <legend>Enter Numbers</legend>
+        <label for="otc-1">Number 1</label>
+        <label for="otc-2">Number 2</label>
+        <label for="otc-3">Number 3</label>
+    
+        <div>
+          <!-- https://developer.apple.com/documentation/security/password_autofill/enabling_password_autofill_on_an_html_input_element -->
+          <input type="number" pattern="[0-9]*"  value="" inputtype="numeric" autocomplete="enter-number" id="otc-1" required>
+    
+          <!-- Autocomplete not to put on other input -->
+          <input type="number" pattern="[0-9]*"  value="" inputtype="numeric" id="otc-2" required>
+          <input type="number" pattern="[0-9]*"  value="" inputtype="numeric" id="otc-3" required>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 
-<div class="container">
+  <div class="container">
+ 
 <div id="bgDiv" style="width: 70%; height: 70%">
   <svg
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -161,7 +183,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="-203 -23 510 510">
       <rect x="-200" y="-20" width="500" height="500" fill="pink" style="fill-opacity:95%; stroke: black; stroke-opacity: 1; stroke-width: 2"/>
-      <text id="yaoNumber" x="50" y="10" font-size="20" >12</text>
+      <text id="zhuGuaTitle" x="50" y="10" font-size="20" ></text>
+      <text id="bianGuaTitle" x="50" y="40" font-size="20" ></text>
     </svg>
   </div>
 </div>
@@ -176,3 +199,4 @@
 
 
 </body>
+<script src="js/input.js"></script>

@@ -112,18 +112,6 @@ yaoBtn.onclick = function() {
     showCard();
 }
 
-var currentYao = -1;
-function drawCard(){
-    var time = new Date().getTime();
-    if(speed===0) speed=Math.random();
-    var yaoNumber = Math.floor(time*speed)%numYao;
-    console.log(yaoNumber);
-    currentYao = yaoNumber;
-
-    document.querySelector("#yaoNumber").innerHTML=currentYao;
-    document.querySelector("#yaoDetail").innerHTML=data[1].detail;
-}
-
 resetBtn.onclick = function(){
     bgDiv.classList.remove("bg");
     bgDiv.classList.add("fg");
@@ -132,6 +120,78 @@ resetBtn.onclick = function(){
     yaoDetail.classList.remove("show");
     yaoDetail.classList.add("hidden");
 }
+
+var result;
+function drawCard(){
+    // var time = new Date().getTime();
+    // if(speed===0) speed=Math.random();
+    // var yaoNumber = Math.floor(time*speed)%numYao;
+
+    var n=[];
+    n[0] = document.querySelector("#otc-1").value;
+    n[1] = document.querySelector("#otc-2").value;
+    n[2] = document.querySelector("#otc-3").value;
+    console.log(n);
+    var m=[];
+    m[0]=n[0]%8+1;
+    m[1]=n[1]%8+1;
+    m[2]=n[2]%6+1;
+    console.log(m);
+
+    var {zhuGua, bianGua} = result = suanGua(m);
+
+    console.log(zhuGua, bianGua);
+
+    document.querySelector("#zhuGuaTitle").innerHTML=zhuGua.title;
+    document.querySelector("#bianGuaTitle").innerHTML=bianGua.title;
+    document.querySelector("#yaoDetail").innerHTML=data[1].detail;
+}
+
+var numTo8GuaMap = {
+    "1": "1,1,1",
+    "2": "0,1,1",
+    "3": "1,0,1",
+    "4": "0,0,1",
+    "5": "1,1,0",
+    "6": "0,1,0",
+    "7": "1,0,0",
+    "8": "0,0,0",
+}
+function suanGua(m){
+    var gua1 = numTo8GuaMap[m[0]];
+    var gua2 = numTo8GuaMap[m[1]];
+    var heGua = gua1.concat(',', gua2);
+    var zhuGua = findIn64Gua(heGua);
+
+    var heGuaArray = heGua.split(',');
+    var index = 6-m[2];
+    if(heGuaArray[index] === '0') {
+        heGuaArray[index]='1';
+    } else if(heGuaArray[index] === '1') {
+        heGuaArray[index]='0';
+    }
+    var bianGua = findIn64Gua(heGuaArray.join());
+    
+    console.log(zhuGua, bianGua);
+    return {"zhuGua":zhuGua, "bianGua":bianGua};
+}
+
+
+function findIn64Gua(heGua){
+    for(var i=1;i<=64;i++){
+        if(heGua === Gua_Array_64[i].yao.join()){
+            return Gua_Array_64[i];
+        }
+    }
+}
+
+var Gua_Array_64;
+fetch("./data.json")
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+    Gua_Array_64 = data;
+});
 
 var data={
     "1":{
