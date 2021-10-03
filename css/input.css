@@ -33,7 +33,7 @@
 
 .otc legend {
 	margin: 0 auto 1em;
-	color: #5555FF;
+	color: #111111;
 }
 
 input[type="number"] {
@@ -47,7 +47,7 @@ input[type="number"] {
 	appearance: textfield;
 	-webkit-appearance: textfield;
 	border: 2px solid #BBBBFF;
-	color: purple;
+	color: 111111;
 	border-radius: 4px;
 }
 

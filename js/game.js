@@ -107,9 +107,12 @@ function showCard(){
 
 var numYao = 64;
 yaoBtn.onclick = function() {
-    spinStop();
-    drawCard();
-    showCard();
+    if(drawCard()){
+        spinStop();
+        showCard();
+    }else{
+        
+    }
 }
 
 resetBtn.onclick = function(){
@@ -131,6 +134,7 @@ function drawCard(){
     n[0] = document.querySelector("#otc-1").value;
     n[1] = document.querySelector("#otc-2").value;
     n[2] = document.querySelector("#otc-3").value;
+    if(n[0]==='' || n[1]==='' || n[2]==='' ) return;
     console.log(n);
     var m=[];
     m[0]=n[0]%8+1;
@@ -173,7 +177,7 @@ function suanGua(m){
     var bianGua = findIn64Gua(heGuaArray.join());
     
     console.log(zhuGua, bianGua);
-    return {"zhuGua":zhuGua, "bianGua":bianGua};
+    return {zhuGua, bianGua};
 }
 
 
