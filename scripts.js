@@ -53,7 +53,7 @@ function changeGua(){
 }
 
 
-fetch("./data.json")
+fetch("./json/data.json")
 .then(response => response.json())
 .then(data => {
     console.log(data);

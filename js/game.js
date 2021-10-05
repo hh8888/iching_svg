@@ -111,7 +111,7 @@ yaoBtn.onclick = function() {
         spinStop();
         showCard();
     }else{
-        
+
     }
 }
 
@@ -149,6 +149,7 @@ function drawCard(){
     document.querySelector("#zhuGuaTitle").innerHTML=zhuGua.title;
     document.querySelector("#bianGuaTitle").innerHTML=bianGua.title;
     document.querySelector("#yaoDetail").innerHTML=data[1].detail;
+    return result;
 }
 
 var numTo8GuaMap = {
@@ -190,7 +191,7 @@ function findIn64Gua(heGua){
 }
 
 var Gua_Array_64;
-fetch("./data.json")
+fetch("./json/data.json")
 .then(response => response.json())
 .then(data => {
     console.log(data);

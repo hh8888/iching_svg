@@ -11,10 +11,20 @@
   <script src="js/game.js"></script>
   <link rel="stylesheet" href="css/game.css">
   <link rel="stylesheet" href="css/input.css">
+  <style>
+    @font-face{font-family:'ZoomlaTangYin-A053'; /*逐浪唐寅行书体*/
+        src: url('https://code.z01.com/font/ZoomlaTangYin-A053.eot?#iefix'); /* IE9 */
+        src: url('https://code.z01.com/font/ZoomlaTangYin-A053.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+        url('https://code.z01.com/font/ZoomlaTangYin-A053.woff') format("woff"), /* chrome、firefox */
+        url('https://code.z01.com/font/ZoomlaTangYin-A053.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+        url('https://code.z01.com/font/ZoomlaTangYin-A053.svg#ZoomlaTangYin-A053') format("svg"); /* iOS 4.1- */
+        font-style: normal; font-weight: normal;}
+    </style>
 </head>
 
 <body>
  
+  <h1 style="font-family:ZoomlaTangYin-A053; font-weight:500; font-size:4em; display: none;" >坤	剥	比	观	豫	晋	萃	否	谦	艮	蹇	渐	小过	旅	咸	遁	师	蒙	坎	涣	解	未济	困	讼	升	蛊	井	巽	恒	鼎	大过	姤	复	颐	屯	益	震	噬嗑	随	无妄	明夷	贲	既济	家人	丰	离	革	同人	临	损	节	中孚	归妹	睽	兑	履	泰	大畜	需	小畜	大壮	大有	夬 （决）	乾</h1>
   <div id="inputNumbers" class=" card">
     <form class="otc" name="enter-number" action="#">
       <fieldset>
@@ -35,6 +45,15 @@
     </form>
   </div>
 
+  <button id="play">Spin</button>
+  <button id="plus">+</button>
+  <button id="minus">-</button>
+  <button id="pause">Stop</button>
+  <span id="speed"></span>
+  <br>
+  <button id="yao">Yao</button>
+  <button id="reset">Reset</button>
+  
   <div class="container">
  
 <div id="bgDiv" style="width: 70%; height: 70%">
@@ -188,14 +207,6 @@
     </svg>
   </div>
 </div>
-<button id="play">Spin</button>
-<button id="plus">+</button>
-<button id="minus">-</button>
-<button id="pause">Stop</button>
-<span id="speed"></span>
-<br>
-<button id="yao">Yao</button>
-<button id="reset">Reset</button>
 
 
 </body>
