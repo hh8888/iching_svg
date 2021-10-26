@@ -9,7 +9,9 @@ window.onload=function(){
     resetBtn = document.getElementById("reset"),
     minusBtn = document.getElementById("minus"),
     speedText = document.getElementById("speed"),
+    numberDiv = document.getElementById("inputNumbers"),
     bgDiv = document.getElementById("bgDiv"),
+    closeDiv = document.getElementById("closeDiv"),
     yaoCard = document.getElementById("yaoCard"),
     yaoDetail = document.getElementById("yaoDetail"),
     audio    = document.createElement("audio");
@@ -96,6 +98,8 @@ function spinStop(){
 }
 
 function showCard(){
+    numberDiv.classList.remove("show");
+    numberDiv.classList.add("hidden");
     bgDiv.classList.remove("fg");
     bgDiv.classList.add("bg");
     yaoCard.classList.remove("hidden");
@@ -115,7 +119,10 @@ yaoBtn.onclick = function() {
     }
 }
 
-resetBtn.onclick = function(){
+//resetBtn
+closeDiv.onclick = function(){
+    numberDiv.classList.remove("hidden");
+    numberDiv.classList.add("show");
     bgDiv.classList.remove("bg");
     bgDiv.classList.add("fg");
     yaoCard.classList.remove("show");
@@ -183,7 +190,7 @@ function suanGua(m){
 
 
 function findIn64Gua(heGua){
-    for(var i=1;i<=64;i++){
+    for(var i=0;i<64;i++){
         if(heGua === Gua_Array_64[i].yao.join()){
             return Gua_Array_64[i];
         }

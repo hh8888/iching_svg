@@ -16,8 +16,8 @@ ins.forEach(function(input) {
 		if ( (e.keyCode === 8 || e.keyCode === 37) && this.previousElementSibling && this.previousElementSibling.tagName === "INPUT" ) {
 			this.previousElementSibling.select();
 		} else if (e.keyCode !== 8 && this.nextElementSibling) {
-            // iching: need to allow multi digits
-			// this.nextElementSibling.select();
+            // iching: disable next line to allow multi digits
+			this.nextElementSibling.select();
 		}
 	});
 	

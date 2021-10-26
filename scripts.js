@@ -29,11 +29,17 @@ function setGua(index){
   var gua = Gua_Array_64[index];
   setYao(gua.yao);
   setTitle(gua.title);
+  setPinyin(gua.py);
   setNumber(index+1);
 }
 
 function setTitle(text){
     var el = document.querySelector('#title');
+    el.innerHTML = text;
+}
+
+function setPinyin(text){
+    var el = document.querySelector('#pinyin');
     el.innerHTML = text;
 }
 
