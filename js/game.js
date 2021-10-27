@@ -120,6 +120,10 @@ yaoBtn.onclick = function() {
 }
 
 //resetBtn
+resetBtn.onclick = function(){
+    location.reload();
+}
+
 closeDiv.onclick = function(){
     numberDiv.classList.remove("hidden");
     numberDiv.classList.add("show");
