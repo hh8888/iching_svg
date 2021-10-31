@@ -20,6 +20,10 @@ ins.forEach(function(input) {
 			this.nextElementSibling.select();
 		}
 	});
+	input.addEventListener('keydown', function(e){
+		//todo:remove existing number
+		e.target.value = '';
+	});
 	
 	/**
 	 * Better control on Focus
